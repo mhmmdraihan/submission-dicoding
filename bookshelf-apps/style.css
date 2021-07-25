@@ -1,0 +1,279 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(to right, teal, rgb(0, 152, 116), rgb(0, 152, 116));
+}
+
+body, input, button {
+    font-family: 'Open Sans', sans-serif;
+}
+
+input, button {
+    font-size: 16px;
+}
+
+.head_bar {
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #111;
+    color: cornflowerblue;
+}
+
+.head_bar .head_bar__title {
+    border: 3px solid cornflowerblue;
+    padding: 5px 30px;
+    background-color: rgba(0, 0, 0, .8);
+}
+
+main {
+    max-width: 800px;
+    width: 80%;
+    margin: 0 auto;
+    padding: 16px;
+
+}
+
+.input_section,
+.search_section,
+.book_shelf {
+    background-color: rgba(0, 0, 0, .8);
+}
+
+.input_section {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.input_section > h2 {
+    text-align: center;
+    color: cornflowerblue;
+}
+
+.input_section > form > .input {
+    margin: 8px 0;
+}
+
+.input_section > form > button {
+    background-color: cornflowerblue;
+    color: white;
+    border: 0;
+    border-radius: 5px;
+    display: block;
+    width: 100%;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.input_section > form > button > span {
+    font-weight: bold;
+}
+
+.input_section > form > .input > input {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+
+
+.input_section > form > .input > label {
+    color: cornflowerblue;
+    font-weight: bold;
+}
+
+.input_section > form > .input_inline {
+    margin: 12px 0;
+    display: flex;
+    align-items: center;
+}
+
+.input_section > form > .input_inline > label {
+    color: cornflowerblue;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.search_section {
+    margin: 16px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.search_section > h2 {
+    color: cornflowerblue;
+}
+
+.search_section > form {
+    padding: 16px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto 1fr 0.5fr;
+    grid-gap: 10px;
+}
+
+.search_section > form > label {
+    display: flex;
+    align-items: center;
+    color: cornflowerblue;
+    font-weight: bolder;
+    font-size: 1.1em;
+}
+
+.search_section > form > input {
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.search_section > form > button {
+    background-color: cornflowerblue;
+    color: white;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.book_shelf {
+    margin: 16px 0 0 0;
+    border: 1px solid black;
+    padding: 16px;
+    border-radius: 10px;
+}
+
+.book_shelf > h2 {
+    color: cornflowerblue;
+}
+
+.book_list {
+    padding: 16px;
+}
+
+.book_list > .book_item {
+    padding: 8px 16px 16px 16px;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 10px 0;
+    background-color: rgb(240, 240, 240);
+}
+
+.book_list > .book_item > h3, p {
+    margin: 8px 0;
+}
+
+.book_list > .book_item > .action > button {
+    border: 0;
+    padding: 5px;
+    margin: 0 5px 0 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.book_list > .book_item > .action > .green {
+    background-color: darkgreen;
+    color: white;
+}
+
+.book_list > .book_item > .action > .red {
+    background-color: darkred;
+    color: white;
+}
+
+.book_list > .search_item > .action > .red1 {
+    background-color: darkred;
+    color: white;
+}
+
+
+
+/* custom pop-up box */
+.box,
+.box2 {
+    width: 500px;
+    overflow: hidden;
+    background: #f1f1f1;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .5);
+    border-radius: 8px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 99999;
+    padding: 10px;
+    text-align: center;
+    visibility: hidden;
+}
+
+/* .box2 {
+    visibility: visible;
+} */
+
+.box span {
+    font-size: 45px;
+    font-weight: bolder;
+    color: whitesmoke;
+    background-color: darkred;
+    padding: 0px 20px;
+    border-radius: 5px;
+}
+
+.box a {
+    text-decoration: none;
+}
+
+.box h1,
+.box2 h1 {
+    font-size: 25px;
+    margin: 8px auto;
+}
+
+.box label,
+.box2 label {
+    font-size: 20px;
+    font-weight: bolder;
+    color: rgb(107, 107, 107);
+    margin-bottom: 5px;
+}
+
+.box .btns,
+.box2 .btns {
+    margin: 30px 0 15px 0;
+}
+
+.btns .btn1,
+.btns .btn2,
+.btns span {
+    background: rgb(116, 116, 116);
+    color: white;
+    font-size: 18px;
+    font-weight: bolder;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.btns .btn2 {
+    background: rgb(167, 2, 2);
+    margin-left: 15px;
+}
+
+
+.btns span {
+    cursor: pointer;
+}
+
+.btns .btn1:hover,
+.btns span:hover {
+    background: salmon;
+}
